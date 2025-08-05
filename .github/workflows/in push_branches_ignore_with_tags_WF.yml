@@ -6,7 +6,7 @@ on:
      branches-ignore:
       -  feature
      tags:
-      -  test
+      -  V2,2
 jobs:
   build:
     runs-on: ubuntu-latest
