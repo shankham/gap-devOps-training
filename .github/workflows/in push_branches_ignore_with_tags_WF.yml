@@ -1,0 +1,29 @@
+name: push_branches_ignore_with_tags workflow
+
+
+on: 
+  push:
+     branches-ignore:
+      -  feature
+     tags:
+      -  V2,2
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print
+        run: echo 'build in push_branches_ignore_with_tags workflow'
+
+  test:
+    runs-on: windows-latest
+    steps:
+      - name: Print test - chrome
+        run: echo 'test in push_branches_ignore_with_tags workflow' chrome
+      - name: Print test - edge
+        run: echo 'test in push_branches_ignore_with_tags workflow' edge
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print deploy
+        run: echo 'deploy in push_branches_ignore_with_tags workflow'
