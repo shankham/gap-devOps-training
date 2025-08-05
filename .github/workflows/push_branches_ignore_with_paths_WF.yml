@@ -11,18 +11,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print
-        run: echo 'build'
+        run: echo 'build in push_branches_ignore_with_paths workflow'
 
   test:
     runs-on: windows-latest
     steps:
       - name: Print test - chrome
-        run: echo 'test' chrome
+        run: echo 'test in push_branches_ignore_with_paths workflow' chrome
       - name: Print test - edge
-        run: echo 'test' edge
+        run: echo 'test in push_branches_ignore_with_paths workflow' edge
 
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Print deploy
-        run: echo 'deploy'
+        run: echo 'deploy in push_branches_ignore_with_paths workflow'
