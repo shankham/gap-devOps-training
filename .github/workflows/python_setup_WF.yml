@@ -1,4 +1,4 @@
-ioname: Python Setup
+name: Python Setup
 
 on:
  workflow_dispatch
