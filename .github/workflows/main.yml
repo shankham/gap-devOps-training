@@ -3,15 +3,16 @@ on:
  workflow_dispatch
 env:
  MY_VAR: workflow
+ run: |
+    echo 'MY_VAR --> ${{env.MY_VAR}}'
 jobs:
  variables:
   env:
    MY_VAR: jobs
   runs-on: ubuntu-latest
   steps:
-  - name: Print
+  - name: Print inside steps
     run: |
-     echo ' Secrets PWD --> ${{secrets.PASSWORD}}'
      echo 'MY_VAR --> ${{env.MY_VAR}}'
     env:
      MY_VAR: steps
