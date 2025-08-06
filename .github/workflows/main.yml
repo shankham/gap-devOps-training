@@ -8,8 +8,8 @@ jobs:
  variables:
   env:
    MY_VAR: jobs
-  if: ${{env.MY_VAR}} == 'jobs'
-   echo 'MY_VAR --> ${{env.MY_VAR}}'
+#  if: ${{env.MY_VAR}} == 'jobs'
+#  name: echo 'MY_VAR --> ${{env.MY_VAR}}'
   runs-on: ubuntu-latest
   steps:
   - name: Print inside steps
