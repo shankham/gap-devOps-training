@@ -1,6 +1,4 @@
-name: GitHub Context
-
-
+name: Print GitHub Context WF
 on:
  workflow_dispatch
 jobs:
@@ -14,9 +12,17 @@ jobs:
       echo 'Repo url ${{github.repositoryUrl}}'
       echo 'Repo token ${{github.token}}'
       echo 'Workflow name ${{github.workflow}}'
+      echo 'Workflow SHA ${{github.workflow_sha}}'
+      echo 'Workflow ref ${{github.workflow_ref}}'
+      echo 'workspace name ${{github.workspace}}'
+      echo 'target branch of PR in WF run ${{github.base_ref}}'
+      echo 'Head Ref or Source Branch ${{github.head_ref}}'
+      echo 'path name ${{github.path}}'
+      echo 'URL of the GitHub server ${{github.server_url}}'
       echo 'Actor ${{github.actor}}'
       echo  'ref details ${{github.ref}}'
       echo 'trigger event $${{github.event_name}}'
+      echo 'trigger event path $${{github.event_path}}'
       echo 'Run id ${{github.run_id}}'
       echo 'Runner number is ${{github.run_number}}'
    -  name: Examples
