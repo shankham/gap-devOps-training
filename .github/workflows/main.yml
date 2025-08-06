@@ -3,12 +3,13 @@ on:
  workflow_dispatch
 env:
  MY_VAR: workflow
- run: |
-    echo 'MY_VAR --> ${{env.MY_VAR}}'
+
 jobs:
  variables:
   env:
    MY_VAR: jobs
+  if: ${{env.MY_VAR}} == 'jobs'
+   echo 'MY_VAR --> ${{env.MY_VAR}}'
   runs-on: ubuntu-latest
   steps:
   - name: Print inside steps
