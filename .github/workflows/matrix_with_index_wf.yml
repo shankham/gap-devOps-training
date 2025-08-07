@@ -9,9 +9,9 @@ jobs:
      include:
      - index: 0
        os:  ubuntu-latest
-     - index: 2       
+     - index: 1       
        os:  windows-latest
-     java-version: [17, 21] 
+     java-version: [17, 20] 
        
   steps:
    - name: Setup Java JDK
