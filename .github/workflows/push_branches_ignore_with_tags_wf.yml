@@ -1,0 +1,27 @@
+name: Push Branches Ignore With Tags Workflow
+on: 
+  push:
+     branches-ignore:
+      -  feature
+     tags:
+      -  test
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print
+        run: echo 'Push Branches Ignore With Tags Workflow --> build'
+
+  test:
+    runs-on: windows-latest
+    steps:
+      - name: Print test - chrome
+        run: echo 'Push Branches Ignore With Tags Workflow --> test' chrome
+      - name: Print test - edge
+        run: echo 'Push Branches Ignore With Tags Workflow --> test' edge
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print deploy
+        run: echo 'Push Branches Ignore With Tags Workflow --> deploy'
