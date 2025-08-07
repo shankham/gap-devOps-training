@@ -1,5 +1,4 @@
-Implementation of Needs in WF
-name: Outputs
+name: Implementation of Output with Needs in WF
 
 on: workflow_dispatch
 
