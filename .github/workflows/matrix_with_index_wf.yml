@@ -9,7 +9,7 @@ jobs:
      include:
      - index: 0
        os:  ubuntu-latest
-     - index: 1       
+     - index: 2       
        os:  windows-latest
      java-version: [17, 21] 
        
