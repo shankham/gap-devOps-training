@@ -13,11 +13,11 @@ jobs:
        os:  ubuntu-latest
        java-version: 17
      - index: 1
-       total: 4
+       total: 5
        os: windows-latest
        java-version: 21
      - index: 2
-       total: 4
+       total: 3
        os: windows-latest
        java-version: 17
      - index: 3
