@@ -4,8 +4,8 @@ on: workflow_dispatch
 jobs:
  matrix-jobs:
   runs-on: ${{matrix.os}}
-  strategy:
-    fail-fast:false 
+  strategy:  
+    fail-fast: false 
 # Here java-version 20 is not available, jobs of Java setup in ubuntu and windows will be 
 # discarded but other jobs with java-version 17 will be executed as fail-fast is false
     matrix:
