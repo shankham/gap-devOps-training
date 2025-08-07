@@ -9,19 +9,19 @@ jobs:
     matrix:
      include:
      - index: 0
-       total: 4
+       total: 1
        os:  ubuntu-latest
        java-version: 17
      - index: 1
-       total: 5
+       total: 2
        os: windows-latest
        java-version: 21
      - index: 2
-       total: 3
+       total: 1
        os: windows-latest
        java-version: 17
      - index: 3
-       total: 4
+       total: 2
        os: ubuntu-latest
        java-version: 21
        
