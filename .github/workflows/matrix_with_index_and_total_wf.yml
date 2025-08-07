@@ -17,7 +17,7 @@ jobs:
        os: windows-latest
        java-version: 21
      - index: 2
-       total: 1
+       total: 0
        os: windows-latest
        java-version: 17
      - index: 3
