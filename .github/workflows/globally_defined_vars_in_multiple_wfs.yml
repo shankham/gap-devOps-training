@@ -11,9 +11,9 @@ jobs:
   steps:
   - name: Print
     run: |
-     echo ' ${{env.MY_VAR}}'
-     echo ' ${{vars.MY_VAR}}'
-     echo ' ${{vars.USER_NAME}}'
+     echo 'Environment variable defined in single workflow --> ${{env.MY_VAR}}'
+     echo 'Repository variable MY_VAR defined used in multile workflows --> ${{vars.MY_VAR}}'
+     echo 'Repository variable USER_NAME defined used in multile workflows -->  ${{vars.USER_NAME}}'
     env:
      MY_VAR: steps
   
