@@ -8,12 +8,9 @@ jobs:
     matrix:
      include:
      - index: 0
-       total: 4
        os:  ubuntu-latest
-       #java: 17
      - index: 1       
        os:  windows-latest
-       #java: 21
      java-version: [17, 21] 
        
   steps:
