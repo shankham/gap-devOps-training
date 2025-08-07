@@ -12,7 +12,7 @@ jobs:
        os:  ubuntu-latest
        #java: 17
      - index: 1       
-       os:  ubuntu-latest
+       os:  windows-latest
        #java: 21
      java-version: [17, 21] 
        
