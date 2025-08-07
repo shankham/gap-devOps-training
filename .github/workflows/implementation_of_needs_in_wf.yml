@@ -1,4 +1,4 @@
-name: Use of Needs in WF
+name: Implementation of Needs in WF
 on:  
   push
 
