@@ -7,22 +7,13 @@ jobs:
     fail-fast: false
     matrix:
      include:
-     - index: 0
-       
+     - index: 0       
        os:  ubuntu-latest
-       java: 17
-     - index: 1
-       
+       #java: 17
+     - index: 1       
        os:  ubuntu-latest
-       java: 21
-     - index: 2
-       
-       os: windows-latest
-       java: 17
-     - index: 3
-       
-       os: windows-latest
-       java: 21
+       #java: 21
+     java-version: [17, 21] 
        
   steps:
    - name: Setup Java JDK
