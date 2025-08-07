@@ -11,7 +11,9 @@ jobs:
   steps:
   - name: Print
     run: |
-     echo ' ${{secrets.PASSWORD}}'
+     echo ' ${{env.MY_VAR}}'
+     echo ' ${{vars.MY_VAR}}'
+     echo ' ${{vars.USER_NAME}}'
     env:
      MY_VAR: steps
   
