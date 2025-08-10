@@ -1,12 +1,10 @@
-name: CI Non containerization build
-
+name: CI non containerization build
 on:
  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     services:
       postgres:
         image: postgres:15
