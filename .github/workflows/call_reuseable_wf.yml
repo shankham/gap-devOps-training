@@ -5,4 +5,4 @@ on:
       - main
 jobs:
   call-reusable:
-    uses:  ./.github/workflows/reuseable.yml
+    uses:  ./.github/workflows/reusable.yml
