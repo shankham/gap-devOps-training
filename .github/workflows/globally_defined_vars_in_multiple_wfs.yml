@@ -1,0 +1,20 @@
+name: Globally defined vars in multiple WFs
+on:
+ workflow_dispatch
+env:
+ MY_VAR: workflow
+jobs:
+ variables:
+  env:
+   MY_VAR: jobs
+  runs-on: ubuntu-latest
+  steps:
+  - name: Print
+    run: |
+     echo 'Environment variable defined in single workflow --> ${{env.MY_VAR}}'
+     echo 'Repository variable MY_VAR defined used in multile workflows --> ${{vars.MY_VAR}}'
+     echo 'Repository variable USER_NAME defined used in multile workflows -->  ${{vars.USER_NAME}}'
+    env:
+     MY_VAR: steps
+  
+  

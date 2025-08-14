@@ -1,0 +1,25 @@
+name: Implementation of Output with Needs in WF
+
+on: workflow_dispatch
+
+jobs:
+ gen-msg:
+  runs-on: ubuntu-latest
+  outputs: 
+    message1: ${{steps.set-message.outputs.greeting}}
+    message2: ${{steps.another-set-message.outputs.o1}}
+  steps:
+   - id: set-message
+     run: |
+      echo "greeting= Hello Welcome" >> $GITHUB_OUTPUT
+      echo "o1=not welcome" >> $GITHUB_OUTPUT
+   - id: another-set-message
+     run: |
+      echo "o1=not welcome" >> $GITHUB_OUTPUT
+ dis-msg:
+  needs: gen-msg
+  runs-on: ubuntu-latest
+  steps:
+   - run: |
+      echo '${{needs.gen-msg.outputs.message1}}'
+      echo '${{needs.gen-msg.outputs.message2}}'

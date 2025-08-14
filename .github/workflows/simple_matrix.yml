@@ -1,0 +1,25 @@
+name: Simple Matrix
+on: workflow_dispatch
+
+jobs:
+ matrix-jobs:
+  runs-on: ${{matrix.os}}
+  strategy:
+    matrix:
+     os:  
+      - ubuntu-latest
+      - windows-latest
+     java-version: [17, 21]
+     
+# Here if value of any of the keys(here os and java-version) is not available then the jobs for
+# setting up Java JDK will failed and then all other jobs will be cancelled. It means if we put
+# java-version as [17, 20], the jobs for setting up Java JDK for os [ubuntu-latest and windows-
+# latest] with java-version 20 will fail as version 20 is not available. And the other jobs will
+# be cancelled.
+
+  steps:
+   - name: Setup Java JDK
+     uses: actions/setup-java@v3.14.1
+     with:
+      java-version: ${{matrix.java-version}}
+      distribution: microsoft

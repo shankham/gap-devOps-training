@@ -1,0 +1,19 @@
+name: Env Variable inside WF
+on:
+ workflow_dispatch
+env:
+ MY_VAR: workflow
+
+jobs:
+ variables:
+  env:
+   MY_VAR: jobs
+#  if: ${{env.MY_VAR}} == 'jobs'
+#  name: echo 'MY_VAR --> ${{env.MY_VAR}}'
+  runs-on: ubuntu-latest
+  steps:
+  - name: Print inside steps
+    run: echo 'Environment variable defined in single workflow --> ${{env.MY_VAR}}'     
+    env:
+     MY_VAR: steps
+  
